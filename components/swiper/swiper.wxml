@@ -1,0 +1,13 @@
+<!--components/swiper/swiper.wxml-->
+<view>
+  <swiper class="swiper-box" indicator-color="rgba(255, 255, 255, 0.414)" indicator-active-color="white" autoplay interval="4000" circular indicator-dots>
+    <swiper-item wx:for="{{swiperList}}" wx:for-item="item" class="img-box" wx:key="*this">
+      <view class="blur-box">
+          <image class="blur-img" src="{{item.url}}" />
+        </view>
+      <image class="primary-img" mode="widthFix" src="{{item.url}}" />
+    </swiper-item>
+  </swiper>
+</view>
+<view class="time-box">{{mytime}}
+</view>

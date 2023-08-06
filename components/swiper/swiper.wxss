@@ -1,0 +1,45 @@
+/* components/swiper/swiper.wxss */
+page{
+  /* z-index: ; */
+  /* background-color: rgba(255, 255, 255, 0.514); */
+}
+.blur-img {
+  width: 100%;
+  position: relative;
+  filter: blur(10px);
+  z-index: -1;
+}
+.blur-box {
+  width: 100%;
+  position: absolute;
+}
+.primary-img{
+  width: 80%;
+  height: 80%;
+  margin: auto;
+  border-radius: 15px;
+}
+.img-box{
+  /* height: 400rpx; */
+  display: flex;
+  overflow: hidden;
+}
+.swiper-box {
+  width: 100%;
+  height: calc(120vw*300/520);
+}
+
+.swiper-img {
+  width: 100%;
+  margin: auto;
+}
+.time-box{
+  position: fixed;
+  top: 220px;
+  right: 0;
+  color: white;
+  font-weight: 1000;
+  font-size: 36px;
+  font-family:serif;
+  background: linear-gradient(to right, #ffffff00, #81dbffa9);
+}
