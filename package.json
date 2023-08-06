@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "miniprogram-sm-crypto": "^0.3.12",
+    "vant": "^4.6.3",
+    "weui-wxss": "^2.6.6",
+    "wx-server-sdk": "^2.6.3"
+  }
+}
