@@ -1,0 +1,9 @@
+<!--views/examine/examine.wxml-->
+
+<view class="examine-box">
+  <view class="options-box" wx:for="{{optionsList}}" wx:for-item="item" wx:key="*this" bind:tap="toReportPage" data-url="{{item.navUrl}}">
+    <view>
+      {{item.name}}
+    </view>
+  </view>
+</view>

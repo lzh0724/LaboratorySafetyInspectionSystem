@@ -1,0 +1,5 @@
+<!--views/mine/work/work.wxml-->
+<text>views/mine/work/work.wxml</text>
+<view>
+{{key}}
+</view>

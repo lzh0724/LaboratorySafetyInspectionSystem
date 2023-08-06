@@ -1,0 +1,14 @@
+<!--views/asset/details/details.wxml-->
+<view class="inventory-details-box">
+  <view class="inventory-item" wx:for="{{detailsInfo}}" wx:key="*this" wx:for-item="item">
+    <view class="inventory-item-title">{{item.title}}</view>
+    <view class="inventory-item-context">{{item.value}}</view>
+  </view>
+</view>
+<view>
+  <van-goods-action class="receive-bottom"> 
+  <van-goods-action-icon  icon="{{item.url}}" wx:for="{{receiveBottomIcon}}" 
+  wx:for-item="item" wx:key="*this" icon-class="receive-bottom-icon" text-class="receive-bottom-text" text="{{item.title}}" bind:click="onClickIcon"/>
+  <van-goods-action-button custom-class="receive-bottom-button" text="申领" bind:click="onClickButton" />
+</van-goods-action>
+</view>

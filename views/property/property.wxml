@@ -1,0 +1,8 @@
+<!--views/property/property.wxml-->
+<view>
+  <view>
+    <van-search value="{{ DeleteSearchvalue }}" bind:change="onBindDateSearch" bind:cancel="onCancelSearch" placeholder="请输入日期关键词" />
+  </view>
+  <view>
+  </view>
+</view>

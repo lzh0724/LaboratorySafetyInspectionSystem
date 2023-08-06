@@ -1,0 +1,49 @@
+/* views/asset/assetmanages/assetmanages.wxss */
+.add-info-button{
+  background: linear-gradient(to top right, #7eddff,  #def8ff 80%,white);
+  border-radius: 10px;
+  margin: 5px;
+}
+.successTip{
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  padding-top: 25px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 1000;
+  font-size: 22px;
+  background-color: rgb(0, 130, 252);
+  color: #FFFFFF;
+}
+.inventory-item-box{
+  margin: 15px;
+  border-radius: 12px;
+  color: rgb(124, 124, 124);
+  padding: 15px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px 2px rgb(189, 189, 189);
+
+}
+
+.inventory-item{
+  display: flex;
+  margin: 10px 0;
+  padding-bottom: 10px;
+  border-bottom:1px solid #ccc;
+}
+
+.inventory-item-context{
+  margin-left: 16px;
+  color: black;
+}
+.delete-button{
+  background-color: rgb(53, 178, 250);
+  box-shadow: 0 4px 4px 2px rgb(211, 211, 211);
+
+  color: white;
+}
+.delete-button:active{
+  background-color: rgba(53, 178, 250, 0.685);
+  box-shadow: 0 1px 1px 2px rgb(211, 211, 211);
+
+}

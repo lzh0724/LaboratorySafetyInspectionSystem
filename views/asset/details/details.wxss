@@ -1,0 +1,31 @@
+/* views/asset/details/details.wxss */
+.inventory-item{
+  display: flex;
+  margin: 10px 0;
+  padding: 10px;
+  border-bottom:1px solid #ccc;
+}
+.inventory-details-box{
+  background-color: #fff;
+  margin-bottom: 100px;
+}
+.inventory-item-context{
+  margin-left: 16px;
+  color: black;
+}
+.inventory-item-title{
+  color: rgb(122, 122, 122);
+}
+.receive-bottom-button{
+  width: 80% !important;
+  background: rgb(44,126,254) !important;
+  border-radius: 6px !important;
+  float: right;
+}
+.receive-bottom-text{
+  font-size: 12px !important;
+}
+.receive-bottom-icon{
+  width: 20px !important;
+  height: 20px !important;
+}

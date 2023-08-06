@@ -1,0 +1,12 @@
+<!--views/examine/create/create.wxml-->
+<view>
+  <van-cell-group>
+    <van-field wx:for="{{createReportList}}" wx:for-index="index" wx:for-item="item" value="{{ item.value }}" required clearable label="{{ item.title }}" icon="question-o" placeholder="{{ item.title }}" bind:click-icon="onClickIcon" bind:change="ondetailsInfoListChange" data-index="{{index}}" />
+  </van-cell-group>
+  <view class="uploadphoto-box">
+    <van-uploader file-list="{{ reportPhotoList }}" deletable="{{ true }}" max-count="2" bind:after-read="afterRead" bind:delete="deletePhoto" />
+
+  </view>
+  <button bind:tap="addDetailsInfo" class="add-info-button">添加</button>
+</view>
+<image src="{{this.data.cloudPath[0].fileID}}" mode=""/>

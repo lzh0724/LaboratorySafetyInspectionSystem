@@ -1,0 +1,49 @@
+<!--views/asset/asset.wxml-->
+<van-search value="{{ searchvalue }}" bind:change="onBindSearch" bind:cancel="onCancelSearch" placeholder="请输入名称关键词" />
+
+
+<view class="inventory-box">
+
+  <view wx:if="{{active===0}}" class="inventory-item-box" wx:for="{{articleList}}" wx:key="*this" wx:for-item="article">
+    <view class="inventory-details" bind:tap="toDetailsPage" data-from="{{article.name}}">
+      <view class="inventory-item">
+        <view class="inventory-item-title">名称</view>
+        <view class="inventory-item-context">{{article.name}}</view>
+      </view>
+      <view class="inventory-item">
+        <view class="inventory-item-title">数量</view>
+        <view class="inventory-item-context">{{article.number}}</view>
+      </view>
+      <view class="inventory-item">
+        <view class="inventory-item-title">存放位置</view>
+        <view class="inventory-item-context">{{article.local}}</view>
+      </view>
+      <view class="inventory-item">
+        <view class="inventory-item-title">分类</view>
+        <view class="inventory-item-context">{{article.class}}</view>
+      </view>
+    </view>
+
+    <view class="inventory-options-box">
+      <view class="inventory-options" wx:for="{{inventoryItemIconList}}" wx:key="*this" wx:for-item="item">
+        <view class="inventory-options-icon-box">
+          <image class="inventory-options-icon" src="{{item.url}}" alt="" />
+        </view>
+        <view class="inventory-options-name">{{item.name}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+
+
+
+
+<van-tabbar active="{{ active }}" bind:change="onTabbarChange">
+  <van-tabbar-item wx:for="{{tabbariconList}}" wx:for-item="item" url="{{item.Navurl}}" wx:key="{{item.id}}">
+    <image slot="icon" src="{{ item.iconUrl }}" mode="aspectFit" style="width: 40px; height: 24px;" />
+    <image slot="icon-active" src="{{ item.iconUrlActive }}" mode="aspectFit" style="width: 40px; height: 24px;" />
+    {{item.title}}
+  </van-tabbar-item>
+</van-tabbar>

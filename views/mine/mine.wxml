@@ -1,0 +1,60 @@
+<!--views/mine/mine.wxml-->
+
+<view class="user-box">
+  <view class="user-info" bindtap="checkIsLogin">
+    <image class="user-photo-img" src="{{userinfo.nickavatarUrl}}" mode="" />
+    <text class="user-name">
+      {{userinfo.name?userinfo.name:"未登录"}}
+    </text>
+  </view>
+  <view class="card-box">
+    <view class="welcoming-speech-box">
+      <view class="welcoming-speech-Chinese">
+        研究院欢迎你的到来
+      </view>
+      <view class="welcoming-speech-English">
+        AI and Big data Research Institute
+      </view>
+    </view>
+    <view class="mywork-box">
+      <view>
+        我的事务
+      </view>
+      <view class="work-icon-box">
+        <view class="work" wx:for="{{workIcon}}" wx:key="*this" wx:for-item="item" bindtap="toWorkPage" data-from="{{item.name}}">
+          <image class="work-icon" src="{{item.url}}" mode="" />
+          <view class="work-name">
+            {{item.name}}
+          </view>
+        </view>
+
+      </view>
+    </view>
+  </view>
+  <view class="other-work-box">
+    <van-cell wx:for="{{otherworkIcon}}" wx:for-item="item" wx:key="*this" url="{{item.navurl}}" custom-class="other-work-cell" icon="{{item.url}}" title="{{item.name}}" is-link border="{{ false }}" />
+  </view>
+</view>
+<van-popup round show="{{ loginShowTip }}" bind:close="onClose">
+  <view class="Login-tip-box">
+    <view>
+      <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+        <image class="avatar-image" src="{{nickavatarUrl}}"></image>
+      </button>
+    </view>
+
+    <view class="login-info-box">
+      <view style=" margin: 5rpx 40rpx 0 40px;">
+        昵称
+      </view>
+      <view>
+        <input maxlength="8" bindchange="input_name" value="{{username}}" type="nickname" class="weui-input" placeholder="请输入昵称" />
+      </view>
+    </view>
+    <view class="login-button-box">
+      <van-button class="login-button" bind:tap="login" round type="info" size="large">登录</van-button>
+    </view>
+    <view class="cancel-login" bind:tap="cancelLogin">取消</view>
+  </view>
+
+</van-popup>

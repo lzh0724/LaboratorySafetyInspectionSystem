@@ -1,0 +1,29 @@
+<!--views/index/index.wxml-->
+<view>
+  <view>
+    <conponent-swiper mytime="{{mytime}}" swiperList="{{swiperList}}"></conponent-swiper>
+  </view>
+  <view>
+    <van-notice-bar
+  left-icon="volume-o"
+  text="暂未发布任何公告。"
+/>
+  </view>
+  <view class="optiones-box">
+    <view class="optiones">
+      <view class="optiones-item" bindtap="ShiftTab" data-taburl="{{item.Taburl}}" wx:for="{{optionsList}}" wx:key="*this">
+        <view class="optiones-name">
+          <image class="optiones-img" src="{{item.url}}" mode="" />
+        </view>
+      <view class="optiones-name">{{item.name}}</view>
+      </view>
+    </view>
+  </view>
+  <view style="margin: 20px 0 10px 0 ;text-align: center;color: rgb(75, 108, 255);font-size: 18px;">
+    人工智能与大数据研究院
+  </view>
+  <view style="text-align: center;color: rgb(255, 255, 255);font-weight: 600;">
+  2023
+  </view>
+  <!-- <van-button type="primary" bindtap="getswiper">获取轮播图数据</van-button> -->
+</view>

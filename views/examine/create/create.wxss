@@ -1,0 +1,12 @@
+/* views/examine/create/create.wxss */
+.uploadphoto-box{
+background-color: #fff;
+display: flex;
+justify-content: center;
+}
+.add-info-button{
+  background-color: rgb(71, 178, 250);
+  border-radius: 10px;
+  margin: 0 5px;
+  color: #ffffff;
+}

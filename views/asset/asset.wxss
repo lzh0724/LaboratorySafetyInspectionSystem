@@ -1,0 +1,36 @@
+/* views/asset/asset.wxss */
+.inventory-box{
+  margin-bottom: 100px;
+}
+.inventory-item-box{
+  margin: 30px  15px;
+  border-radius: 12px;
+  color: rgb(124, 124, 124);
+  padding: 15px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px 2px rgb(189, 189, 189);
+}
+.inventory-item{
+  display: flex;
+  margin: 10px 0;
+  padding-bottom: 10px;
+  border-bottom:1px solid #ccc;
+}
+.inventory-options{
+  display: flex;
+}
+.inventory-options-icon{
+  width: 20px;
+  height: 20px;
+}
+.inventory-options-box{
+  display: flex;
+  justify-content: space-between;
+}
+.inventory-options-name{
+  margin-left: 5px;
+}
+.inventory-item-context{
+  margin-left: 16px;
+  color: black;
+}
